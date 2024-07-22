@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>
+          Login Page
+        </title>
+        <script>
+            function loginValidation(){
+                var uname=document.myform.username.value;
+                var pass=document.myform.password.value;
+                 if(uname==null|| uname=="")
+                 {
+                    alert("name cant't be blank")
+                    return false;
+                 }
+                 else if(pass.length<6){
+                    alert("Password must be 6 letters")
+                    return false;
+                 }
+               return true;
+            }
+        </script>
+    </head>
+    <body>
+        <form name="myform" action="Loginsuccess.html" onsubmit=" return loginValidation(this)">
+        UserName:<input type="text" name="username"><br>
+        Password:<input type="password" name="password"><br>
+        <input type="submit">
+        </form>
+    </body>
+</html>
